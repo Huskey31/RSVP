@@ -20,54 +20,17 @@
         }
 
         /* ===== HEADER ===== */
-header {
-    position: relative;
-    height: 100vh; /* full viewport height */
-    width: 100%;   /* ensure full width */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-header > div {
-    position: relative;
-    width: 100%;
-    height: 100%; /* make the container fill header */
-    z-index: 1;
-}
-
-header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* cover entire container */
-    z-index: -1;
-}
-
-
-/* Optional: overlay gradient */
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
-    z-index: 0; /* between video and content */
-}
-
-/* Header content stays above video & overlay */
-header > * {
-    position: relative;
-    z-index: 1;
-}
-
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                        url('brown_back.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
 
         header h1 {
             font-size: 60px;
@@ -157,7 +120,7 @@ header > * {
         footer {
             text-align: center;
             padding: 30px;
-            background: #662d35;
+            background: #6a4141;
             color: white;
         }
 
@@ -200,10 +163,6 @@ header > * {
 
 <header>
     <div>
-        <video autoplay muted loop playsinline>
-  <source src="background_3.mp4" type="video/mp4">
-  <source src="background_3.mp4" type="video/mp4">
-</video>
         <h1>Khanya & Nothando</h1>
         <p>We're Getting Married • 02 May 2026</p>
     </div>
