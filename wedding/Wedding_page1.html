@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khanya & Nothando | Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+            url('Wedding_backround.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h2 {
+            font-size: 40px;
+            color: #b76e79;
+        }
+
+        .title p {
+            color: #777;
+            margin-top: 10px;
+        }
+
+        .story, .details, .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .countdown {
+            text-align: center;
+            font-size: 28px;
+            color: #b76e79;
+            font-weight: bold;
+        }
+
+        /* ===== FORM ===== */
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        form button {
+            background: #b76e79;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form button:hover {
+            background: #a45c67;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #662d35;
+            color: white;
+        }
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        @media(max-width: 600px){
+            header h1 { font-size: 40px; }
+            header p { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Khanya & Nothando</h1>
+        <p>We're Getting Married • 02 May 2026</p>
+    </div>
+</header>
+
+<section>
+    <div class="title">
+        <h2>Our Love Story</h2>
+        <p>Uthando lwethu • Our Journey Together</p>
+    </div>
+
+    <div class="story">
+        <div class="card">
+            <h3>How We Met</h3>
+            <p>We met by chance where buzzing filled the air, a gentle nudge, a message sent with care. What brought us together, though small and unseen, with wings that hum and hearts caught in between?</p>
+        </div>
+        <div class="card">
+            <h3>The Proposal</h3>
+            <p>It all started with waking up way too early, then shouting at the gate, and somehow it led to a successful family meeting. In the middle of all that chaos, I asked the question… and thankfully, the answer was yes!</p>
+        </div>
+        <div class="card">
+            <h3>The Journey</h3>
+            <p>From laughter to challenges, we’ve grown stronger together and are ready for forever.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="title">
+        <h2>Wedding Details</h2>
+        <p>Umshado • Umtshato</p>
+    </div>
+
+    <div class="details">
+        <div class="card">
+            <h3>Ceremony</h3>
+            <p>Traditional Ceremony<br>10:00 AM</p>
+        </div>
+        <div class="card">
+            <h3>Address</h3>
+            <p>Family Celebration Venue<br>Khoza household
+             Mkhambathini area
+             Pietermaritzburg, KwaZulu Natal<br>
+            <a href= 'https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
+        </div>
+        <div class="card">
+            <h3>Dress Code</h3>
+            <p>Traditional | Elegant | Cultural</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="title">
+        <h2>Countdown</h2>
+        <p>Sibala izinsuku • Sibalela iintsuku</p>
+    </div>
+
+    <div class="countdown" id="countdown">
+        Loading countdown...
+    </div>
+</section>
+
+<section>
+    <div class="title">
+        <h2>RSVP</h2>
+        <p>Sicela uqinisekise ukuza kwakho</p>
+    </div>
+
+    <!-- RSVP FORM -->
+    <form action="https://formspree.io/f/meeoydzj" method="POST" onsubmit="alert('Thank you! Your RSVP has been received 💍');">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <label>
+            Will you attend?
+            <select name="attendance" required>
+                <option value="">-- Select an option --</option>
+                <option value="Yes">Yes, I will attend</option>
+                <option value="No">No, I cannot attend</option>
+            </select>
+        </label>
+
+        <label>
+            Number of guests:
+            <select name="guests" required>
+                <option value="">-- Select --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </label>
+
+        <textarea name="message" placeholder="Message for the couple (optional)"></textarea>
+
+        <button type="submit">Confirm Attendance</button>
+
+    </form>
+</section>
+
+<section>
+    <div class="title">
+        <h2>Gallery</h2>
+        <p>Izithombe Zothando Lwethu</p>
+    </div>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="Wedding03.jpg" alt="Photo 1">
+        </div>
+
+        <div class="card">
+            <img src="Wedding_grok.jpg" alt="Photo 2">
+        </div>
+
+        <div class="card">
+            <img src="Wedding_04 (2).jpg" alt="Photo 3">
+        </div>
+
+        
+    </div>
+</section>
+
+<footer>
+    <p>With Love, Khanya & Nothando ❤️</p>
+</footer>
+
+<script>
+    // Countdown Timer
+    const weddingDate = new Date("May 02, 2026 10:00:00").getTime();
+
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = weddingDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            days + " Days • " + hours + " Hours • " + minutes + " Minutes • " + seconds + " Seconds";
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "Today is the Big Day! 🎉";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
