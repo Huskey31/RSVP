@@ -16,18 +16,20 @@
         body {
             background: #ffffff;
             color: #333;
+            line-height: 1.6;
         }
 
         /* ===== HEADER ===== */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-            url('Wedding_backround.jpg') center/cover no-repeat;
+                        url('Wedding_backround.jpg') center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
+            padding: 0 20px;
         }
 
         header h1 {
@@ -42,42 +44,42 @@
 
         /* ===== SECTIONS ===== */
         section {
-            padding: 80px 20px;
+            padding: 60px 20px;
             max-width: 1100px;
             margin: auto;
         }
 
         .title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .title h2 {
-            font-size: 40px;
+            font-size: 36px;
             color: #b76e79;
         }
 
         .title p {
             color: #777;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .story, .details, .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 20px;
         }
 
         .card {
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .countdown {
             text-align: center;
-            font-size: 28px;
+            font-size: 26px;
             color: #b76e79;
             font-weight: bold;
         }
@@ -90,11 +92,11 @@
 
         form input, form select, form textarea, form button {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin-bottom: 15px;
             border-radius: 6px;
             border: 1px solid #ccc;
-            font-size: 15px;
+            font-size: 16px;
         }
 
         form textarea {
@@ -128,9 +130,32 @@
             height: auto;
         }
 
-        @media(max-width: 600px){
-            header h1 { font-size: 40px; }
+        /* ===== RESPONSIVE STYLES ===== */
+        @media(max-width: 768px) {
+            header h1 { font-size: 48px; }
+            header p { font-size: 20px; }
+            .title h2 { font-size: 32px; }
+            .countdown { font-size: 24px; }
+            section { padding: 40px 15px; }
+        }
+
+        @media(max-width: 480px) {
+            header {
+                height: auto;
+                padding: 60px 20px;
+            }
+            header h1 { font-size: 36px; }
             header p { font-size: 18px; }
+            .title h2 { font-size: 28px; }
+            .title p { font-size: 14px; }
+            .story, .details, .gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            form input, form select, form textarea, form button {
+                font-size: 15px;
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -181,7 +206,7 @@
             <p>Family Celebration Venue<br>Khoza household
              Mkhambathini area
              Pietermaritzburg, KwaZulu Natal<br>
-            <a href= 'https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
+            <a href='https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
         </div>
         <div class="card">
             <h3>Dress Code</h3>
@@ -207,13 +232,10 @@
         <p>Sicela uqinisekise ukuza kwakho</p>
     </div>
 
-    <!-- RSVP FORM -->
     <form action="https://formspree.io/f/meeoydzj" method="POST" onsubmit="alert('Thank you! Your RSVP has been received 💍');">
 
         <input type="text" name="name" placeholder="Full Name" required>
-
         <input type="email" name="email" placeholder="Email Address" required>
-
         <input type="tel" name="phone" placeholder="Phone Number" required>
 
         <label>
@@ -235,7 +257,6 @@
         </label>
 
         <textarea name="message" placeholder="Message for the couple (optional)"></textarea>
-
         <button type="submit">Confirm Attendance</button>
 
     </form>
@@ -257,10 +278,8 @@
         </div>
 
         <div class="card">
-            <img src="Wedding_04 (2).jpg" alt="Photo 3">
+            <img src="Wedding_04 2.jpg" alt="Photo 3">
         </div>
-
-        
     </div>
 </section>
 
