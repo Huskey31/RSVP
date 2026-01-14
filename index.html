@@ -19,7 +19,6 @@
             line-height: 1.6;
         }
 
-        /* ===== HEADER ===== */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
@@ -42,7 +41,6 @@
             letter-spacing: 2px;
         }
 
-        /* ===== SECTIONS ===== */
         section {
             padding: 60px 20px;
             max-width: 1100px;
@@ -84,7 +82,6 @@
             font-weight: bold;
         }
 
-        /* ===== FORM ===== */
         form {
             max-width: 500px;
             margin: auto;
@@ -116,7 +113,6 @@
             background: #a45c67;
         }
 
-        /* ===== FOOTER ===== */
         footer {
             text-align: center;
             padding: 30px;
@@ -130,7 +126,6 @@
             height: auto;
         }
 
-        /* ===== RESPONSIVE STYLES ===== */
         @media(max-width: 768px) {
             header h1 { font-size: 48px; }
             header p { font-size: 20px; }
@@ -198,23 +193,24 @@
 
     <div class="details">
         <div class="card">
-              <h3>Day Schedule</h3>
+            <h3>Day Schedule</h3>
             <p>Umembeso: 10:00 AM<br>
-            Wedding Ceremony: 1:00 PM 
-            </p>
+            Wedding Ceremony: 1:00 PM</p>
         </div>
+
         <div class="card">
             <h3>Address</h3>
-            <p>Family Celebration Venue<br>Khoza household
-             Mkhambathini area
-             Pietermaritzburg, KwaZulu Natal<br>
-            <a href='https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
+            <p>Family Celebration Venue<br>
+            Khoza household<br>
+            Mkhambathini area<br>
+            Pietermaritzburg, KwaZulu Natal<br>
+            <a href="https://goo.gl/maps/pYw4MY9D6zUJDaHS9" target="_blank">Click Here For Location</a></p>
         </div>
+
         <div class="card">
             <h3>Dress Code</h3>
             <p>Traditional | Elegant | Cultural</p>
         </div>
-        <h3>Color Palette<img src ="colors.jpg" alt="Dress Code Colors"></h3><br>
     </div>
 </section>
 
@@ -235,11 +231,15 @@
         <p>Sicela uqinisekise ukuza kwakho</p>
     </div>
 
-    <form action="https://formspree.io/f/meeoydzj" method="POST" onsubmit="alert('Thank you! Your RSVP has been received 💍');">
+    <!-- UPDATED FORMSPREE FORM -->
+    <form action="https://formspree.io/f/mbddlrvo" method="POST">
 
         <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <label>
+            Your email:
+            <input type="email" name="email" placeholder="Email Address" required>
+        </label>
 
         <label>
             Will you attend?
@@ -259,9 +259,12 @@
             </select>
         </label>
 
-        <textarea name="message" placeholder="Message for the couple (optional)"></textarea>
-        <button type="submit">Confirm Attendance</button>
+        <label>
+            Your message:
+            <textarea name="message" placeholder="Message for the couple"></textarea>
+        </label>
 
+        <button type="submit">Send RSVP</button>
     </form>
 </section>
 
@@ -291,7 +294,6 @@
 </footer>
 
 <script>
-    // Countdown Timer
     const weddingDate = new Date("May 02, 2026 10:00:00").getTime();
 
     const timer = setInterval(function() {
