@@ -19,6 +19,7 @@
             line-height: 1.6;
         }
 
+        /* ===== HEADER ===== */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
@@ -41,6 +42,7 @@
             letter-spacing: 2px;
         }
 
+        /* ===== SECTIONS ===== */
         section {
             padding: 60px 20px;
             max-width: 1100px;
@@ -82,6 +84,7 @@
             font-weight: bold;
         }
 
+        /* ===== FORM ===== */
         form {
             max-width: 500px;
             margin: auto;
@@ -113,6 +116,7 @@
             background: #a45c67;
         }
 
+        /* ===== FOOTER ===== */
         footer {
             text-align: center;
             padding: 30px;
@@ -126,6 +130,7 @@
             height: auto;
         }
 
+        /* ===== RESPONSIVE STYLES ===== */
         @media(max-width: 768px) {
             header h1 { font-size: 48px; }
             header p { font-size: 20px; }
@@ -159,7 +164,7 @@
 <header>
     <div>
         <h1>Khanya & Nothando</h1>
-        <p>Wedding Celebration • 02 May 2026</p>
+        <p>We're Getting Married • 02 May 2026</p>
     </div>
 </header>
 
@@ -173,16 +178,16 @@
         <div class="card">
             <h3>How We Met</h3>
             <p>What began as two runners in the same club soon became something far more. One run led to another, conversations grew longer, and somewhere between the races, we found each other.
-
 With a shared love for running and for life, we discovered that the best journeys aren’t just about the distance or speed, they’re about who you choose to walk beside.
-
-Now we’re ready for our greatest adventure yet.</p>
+Now we’re ready for our greatest adventure yet. </p>
         </div>
         <div class="card">
             <h3>The Proposal</h3>
-            <p>A simple lunch together turned into something truly unforgettable. Surrounded by laughter, meaningful conversation, and the joy of being in each other’s company, the moment felt perfectly right. It was at The Hill Garden and Pergola that the question was asked a moment filled with love and certainty and with a happy heart, the answer was yes.
+            <p>The Proposal
 
-From there, the journey continued when tradition and family took center stage. Standing at the gate, the call was made to respectfully ask the family for permission, marking the beginning of a new chapter not just for us, but for our families as well</p>
+A simple lunch together turned into something truly unforgettable. Surrounded by laughter, meaningful conversation, and the joy of being in each other’s company, the moment felt perfectly right. It was at The Hill Garden and Pergola that the question was asked a moment filled with love and certainty and with a happy heart, the answer was yes.
+
+From there, the journey continued when tradition and family took center stage. Standing at the gate, the call was made to respectfully ask the family for permission, marking the beginning of a new chapter not just for us, but for our families as well.</p>
         </div>
         <div class="card">
             <h3>The Journey</h3>
@@ -199,24 +204,23 @@ From there, the journey continued when tradition and family took center stage. S
 
     <div class="details">
         <div class="card">
-            <h3>Day Schedule</h3>
+              <h3>Day Schedule</h3>
             <p>Umembeso: 10:00 AM<br>
-            Wedding Ceremony: 1:00 PM</p>
+            Wedding Ceremony: 1:00 PM 
+            </p>
         </div>
-
         <div class="card">
             <h3>Address</h3>
-            <p>Family Celebration Venue<br>
-            Khoza household<br>
-            Mkhambathini area<br>
-            Pietermaritzburg, KwaZulu Natal<br>
-            <a href="https://goo.gl/maps/pYw4MY9D6zUJDaHS9" target="_blank">Click Here For Location</a></p>
+            <p>Family Celebration Venue<br>Khoza household
+             Mkhambathini area
+             Pietermaritzburg, KwaZulu Natal<br>
+            <a href='https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
         </div>
-
         <div class="card">
             <h3>Dress Code</h3>
             <p>Traditional | Elegant | Cultural</p>
         </div>
+        <h3>Color Pallete<img src ="colors.jpg" alt="Dress Code Colors"></h3><br>
     </div>
 </section>
 
@@ -237,15 +241,11 @@ From there, the journey continued when tradition and family took center stage. S
         <p>Sicela uqinisekise ukuza kwakho</p>
     </div>
 
-    <!-- UPDATED FORMSPREE FORM -->
-    <form action="https://formspree.io/f/mbddlrvo" method="POST">
+    <form action="https://formspree.io/f/meeoydzj" method="POST" onsubmit="alert('Thank you! Your RSVP has been received 💍');">
 
         <input type="text" name="name" placeholder="Full Name" required>
-
-        <label>
-            Your email:
-            <input type="email" name="email" placeholder="Email Address" required>
-        </label>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
 
         <label>
             Will you attend?
@@ -265,12 +265,9 @@ From there, the journey continued when tradition and family took center stage. S
             </select>
         </label>
 
-        <label>
-            Your message:
-            <textarea name="message" placeholder="Message for the couple"></textarea>
-        </label>
+        <textarea name="message" placeholder="Message for the couple (optional)"></textarea>
+        <button type="submit">Confirm Attendance</button>
 
-        <button type="submit">Send RSVP</button>
     </form>
 </section>
 
@@ -300,6 +297,7 @@ From there, the journey continued when tradition and family took center stage. S
 </footer>
 
 <script>
+    // Countdown Timer
     const weddingDate = new Date("May 02, 2026 10:00:00").getTime();
 
     const timer = setInterval(function() {
