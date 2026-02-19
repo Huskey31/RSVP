@@ -16,18 +16,20 @@
         body {
             background: #ffffff;
             color: #333;
+            line-height: 1.6;
         }
 
         /* ===== HEADER ===== */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-            url('Wedding_backround.jpg') center/cover no-repeat;
+                        url('brown_back.jpg') center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
+            padding: 0 20px;
         }
 
         header h1 {
@@ -42,42 +44,42 @@
 
         /* ===== SECTIONS ===== */
         section {
-            padding: 80px 20px;
+            padding: 60px 20px;
             max-width: 1100px;
             margin: auto;
         }
 
         .title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
         .title h2 {
-            font-size: 40px;
+            font-size: 36px;
             color: #b76e79;
         }
 
         .title p {
             color: #777;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .story, .details, .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 20px;
         }
 
         .card {
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .countdown {
             text-align: center;
-            font-size: 28px;
+            font-size: 26px;
             color: #b76e79;
             font-weight: bold;
         }
@@ -90,11 +92,11 @@
 
         form input, form select, form textarea, form button {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             margin-bottom: 15px;
             border-radius: 6px;
             border: 1px solid #ccc;
-            font-size: 15px;
+            font-size: 16px;
         }
 
         form textarea {
@@ -118,7 +120,7 @@
         footer {
             text-align: center;
             padding: 30px;
-            background: #662d35;
+            background: #6a4141;
             color: white;
         }
 
@@ -128,9 +130,32 @@
             height: auto;
         }
 
-        @media(max-width: 600px){
-            header h1 { font-size: 40px; }
+        /* ===== RESPONSIVE STYLES ===== */
+        @media(max-width: 768px) {
+            header h1 { font-size: 48px; }
+            header p { font-size: 20px; }
+            .title h2 { font-size: 32px; }
+            .countdown { font-size: 24px; }
+            section { padding: 40px 15px; }
+        }
+
+        @media(max-width: 480px) {
+            header {
+                height: auto;
+                padding: 60px 20px;
+            }
+            header h1 { font-size: 36px; }
             header p { font-size: 18px; }
+            .title h2 { font-size: 28px; }
+            .title p { font-size: 14px; }
+            .story, .details, .gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            form input, form select, form textarea, form button {
+                font-size: 15px;
+                padding: 12px;
+            }
         }
     </style>
 </head>
@@ -152,11 +177,17 @@
     <div class="story">
         <div class="card">
             <h3>How We Met</h3>
-            <p>We met by chance where buzzing filled the air, a gentle nudge, a message sent with care. What brought us together, though small and unseen, with wings that hum and hearts caught in between?</p>
+            <p>What began as two runners in the same club soon became something far more. One run led to another, conversations grew longer, and somewhere between the races, we found each other.
+With a shared love for running and for life, we discovered that the best journeys aren’t just about the distance or speed, they’re about who you choose to walk beside.
+Now we’re ready for our greatest adventure yet. </p>
         </div>
         <div class="card">
             <h3>The Proposal</h3>
-            <p>It all started with waking up way too early, then shouting at the gate, and somehow it led to a successful family meeting. In the middle of all that chaos, I asked the question… and thankfully, the answer was yes!</p>
+            <p>The Proposal
+
+A simple lunch together turned into something truly unforgettable. Surrounded by laughter, meaningful conversation, and the joy of being in each other’s company, the moment felt perfectly right. It was at The Hill Garden and Pergola that the question was asked a moment filled with love and certainty and with a happy heart, the answer was yes.
+
+From there, the journey continued when tradition and family took center stage. Standing at the gate, the call was made to respectfully ask the family for permission, marking the beginning of a new chapter not just for us, but for our families as well.</p>
         </div>
         <div class="card">
             <h3>The Journey</h3>
@@ -173,20 +204,23 @@
 
     <div class="details">
         <div class="card">
-            <h3>Ceremony</h3>
-            <p>Traditional Ceremony<br>10:00 AM</p>
+              <h3>Day Schedule</h3>
+            <p>Umembeso: 10:00 AM<br>
+            Wedding Ceremony: 1:00 PM 
+            </p>
         </div>
         <div class="card">
             <h3>Address</h3>
             <p>Family Celebration Venue<br>Khoza household
              Mkhambathini area
              Pietermaritzburg, KwaZulu Natal<br>
-            <a href= 'https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
+            <a href='https://goo.gl/maps/pYw4MY9D6zUJDaHS9'>Click Here For Location</a></p>
         </div>
         <div class="card">
             <h3>Dress Code</h3>
             <p>Traditional | Elegant | Cultural</p>
         </div>
+        <h3>Color Pallete<img src ="colors.jpg" alt="Dress Code Colors"></h3><br>
     </div>
 </section>
 
@@ -207,13 +241,10 @@
         <p>Sicela uqinisekise ukuza kwakho</p>
     </div>
 
-    <!-- RSVP FORM -->
     <form action="https://formspree.io/f/meeoydzj" method="POST" onsubmit="alert('Thank you! Your RSVP has been received 💍');">
 
         <input type="text" name="name" placeholder="Full Name" required>
-
         <input type="email" name="email" placeholder="Email Address" required>
-
         <input type="tel" name="phone" placeholder="Phone Number" required>
 
         <label>
@@ -235,7 +266,6 @@
         </label>
 
         <textarea name="message" placeholder="Message for the couple (optional)"></textarea>
-
         <button type="submit">Confirm Attendance</button>
 
     </form>
@@ -253,14 +283,12 @@
         </div>
 
         <div class="card">
-            <img src="Wedding_grok.jpg" alt="Photo 2">
+            <img src="prop.jpg" alt="Photo 2">
         </div>
 
         <div class="card">
-            <img src="Wedding_04 (2).jpg" alt="Photo 3">
+            <img src="Wedding_04 2.jpg" alt="Photo 3">
         </div>
-
-        
     </div>
 </section>
 
